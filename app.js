@@ -4,8 +4,12 @@ const app = Vue.createApp({
   },
   methods: {
     addGoal() {
-      this.goals.push(this.entertedGoalValues)
+      this.goals.push(this.entertedGoalValues);
+      this.entertedGoalValues = '';
     },
+    removeGoal(index) {
+      this.goals.splice(index, 1);
+    }
   },
 });
 
